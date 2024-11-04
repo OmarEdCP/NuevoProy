@@ -1,0 +1,48 @@
+body {
+    background-color: #f5f5f5; /* Color de fondo claro */
+}
+.navbar {
+    background-color: #6f4e37; /* Café oscuro */
+}
+.nav-link {
+    color: white !important; /* Naranja para los enlaces */
+}
+.nav-link:hover {
+    color: grey !important; /* Naranja más claro al pasar el ratón */
+}
+.card-title{
+    color: #6f4e37; /* Café oscuro */
+}
+.card-custom {
+       border: #e1c5ae 3px solid;
+  padding-left: 70px;
+            display: flex;
+            align-items: center;
+             background-color: #fce7e7; /* Fondo blanco para secciones */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(115, 87, 63);
+    padding: 20px;
+    
+     height: auto;
+    border-radius: 8px;
+        }
+        .card-custom:hover{
+            background-color: #f7bc89;
+       border: #dd9659 3px solid;
+  padding-left: 70px;
+            display: flex;
+            align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(211, 135, 69);
+    padding: 20px;
+        }
+        .card-custom .card-body {
+            flex: 1;
+             
+        }
+        .card-custom img {
+            max-width: 100%;
+            height: auto;
+             max-width: 100%;
+    }
+        

@@ -1,0 +1,71 @@
+body{
+    background: #FEF2E4;
+}
+h1 {
+    font-size: 2rem;
+    position: relative;
+    overflow: hidden;
+    color: black;
+    background:#b18363;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 3px #e6eb4f;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    -webkit-text-stroke: 10px transparent;
+    letter-spacing: 0.05em;
+}
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background-image: linear-gradient(265deg, #0054be 0, #004ebb 3.33%, #3447b5 6.67%, #563fad 10%, #6d36a3 13.33%, #7f2b98 16.67%, #8e1f8c 20%, #990d7f 23.33%, #a20071 26.67%, #a80063 30%, #ac0054 33.33%, #ad0046 36.67%, #ad0038 40%, #aa002a 43.33%, #a70f1c 46.67%, #a11f0c 50%, #9a2b00 53.33%, #923500 56.67%, #893d00 60%, #7f4400 63.33%, #754a00 66.67%, #695000 70%, #5c5400 73.33%, #4f5800 76.67%, #405c00 80%, #2d5f00 83.33%, #116100 86.67%, #006300 90%, #006405 93.33%, #00651b 96.67%, #00662c 100%);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+h1:hover::after {
+    transform: translateX(0);
+}
+
+.letraEst {
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.centered-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ajusta el ancho máximo según tus necesidades */
+    height: auto; /* Para mantener la proporción de la imagen */
+}
+
+.card{
+   border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px;
+   background-image: linear-gradient(230deg, #cb7000 0, #c75e00 12.5%, #bf4c00 25%, #b33702 37.5%, #a11f0c 50%, #8e0011 62.5%, #7d0013 75%, #6e0015 87.5%, #600017 100%);
+    color:white;
+}
+.form-label{
+    color: #754a00;
+    font-weight: bold;
+}
+        .nav-link {
+    color: white !important; /* Naranja para los enlaces */
+}
+
+.nav-link:hover {
+    color: #f9b071 !important; /* Naranja más claro al pasar el ratón */
+}
+.btn-close{
+    background-color: #aa7953;
+    color:white;
+}
+.btn-close:hover{
+    background-color: #bd8d40;
+}

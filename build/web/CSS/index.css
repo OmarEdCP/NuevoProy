@@ -1,0 +1,83 @@
+body{
+    background: #FEF2E4;
+}
+ .carousel-caption {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 5px;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 70vh;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+    }
+    .carousel-indicators button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-indicators button.active {
+      border: 2px solid #fff;
+    }
+    .hero {
+      position: relative;
+      background: url('Logo/hero-background.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 15px;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      z-index: 1;
+    }
+    .hero-content h2 {
+      font-size: 3rem;
+      font-family: 'Archivo Black', sans-serif;
+      margin-bottom: 0.5rem;
+    }
+    .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-content a {
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      padding: 0.5rem 1.5rem;
+      font-size: 1.125rem;
+      transition: background-color 0.3s ease;
+    }
+    .hero-content a:hover {
+      background-color: #fff;
+      color: #000;
+    }
+    .navbar {
+    background-color: #6f4e37; /* Café oscuro */
+}
+
+.nav-link {
+    color: white !important; /* Naranja para los enlaces */
+}
+
+.nav-link:hover {
+    color: #f9b071 !important; /* Naranja más claro al pasar el ratón */
+}

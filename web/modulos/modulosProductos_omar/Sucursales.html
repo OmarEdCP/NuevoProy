@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sucursales</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+              integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+        <link href="diseño.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg" style="background: #805A3B">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="../../Logo/avatar1.png" alt="Logo" style="width:40px;" class="rounded-pill">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Sucursales</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Acerca de...</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Carrito de compras</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Ordenar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Combos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="modulos/modulosLogin/loginservcios.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Menú</a></li>
+                        </ul>
+                        <form class="d-flex align-items-center ms-auto">
+                            <input class="form-control me-2" type="search" placeholder="Buscar...">
+                            <button class="btn btn-light" type="button">Buscar</button>
+                            <a class="navbar-brand ms-3" href="modulos/PaginasExtras/iniciosesion.html">
+                                <img src="../../Logo/logof.png" alt="Logo" style="width: 100px;" class="rounded-pill">
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <!-- FILA DE FORMULARIO -->
+            <div class="row">  
+                <!-- COLUMNA DE FORMULARIO -->
+                <div class="col sm-12 lg-6 "> 
+                    <form>
+                        <h1>Agregar una nueva sucursal</h1>
+                        <br>
+                        <div class="mb-3" >
+                            <label class="form-label">Nombre de la sucursal 
+                                <input type="text" class="btnm form-control" id="txtNombre" name="txtNombre" aria-describedby="emailHelp" size="50" required>
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Pagina Web
+                                <input type="text" class="btnm form-control" id="txtDescripcion" name="txtDescripcion" aria-describedby="emailHelp" size="50" required>
+                            </label>                     
+                        </div>
+                        <div class=mb-3>
+                            <label  class="form-label">Ubicacion 
+                                <input type="text" class="btnm form-control" id="txtPrecio" name="txtPrecio" aria-describedby="emailHelp" size="50" required>
+                            </label>
+                        </div>
+                        <div class=mb-3>
+                            <label  class="form-label">Latitud 
+                                <input type="text" class="btnm form-control" id="txtPrecio1" name="txtPrecio1" aria-describedby="emailHelp" required>
+                            </label>
+                        </div>
+                        <div class=mb-3>
+                            <label  class="form-label">Longitud 
+                                <input type="text" class="btnm form-control" id="txtPrecio2" name="txtPrecio2" aria-describedby="emailHelp" required>
+                            </label>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Horario
+                                <input type="text" class="btnm form-control" id="txtTipo" name="txtTipo" aria-describedby="emailHelp" size="50" required>
+                            </label>                     
+                        </div>
+                </div> 
+                <div class="col sm-12 lg-6  ">
+                    <h1> Ubicación sucursales </h1>
+                    <div id="mi_mapa" style="height: 400px; width: 400px"></div>
+                    <h1> Foto </h1>
+                    <img src="img/nada.jpg"  id="txtFoto"  name="txtFoto" class="rounded" alt="..." width="400">
+                    <label class="form-label">Selecciona la fotografía de la sucursal
+                        <input type="file" class="btnm form-control" 
+                               id="txtFotoRuta"  name="txtFotoRuta" accept=".jpg, .jpeg, .png" required onchange="despliegaFoto(this.value);">
+ </label>
+                </div> <!-- IMG -->
+            </div>  <!-- FORM -->
+            <div id="map"></div>
+
+            <div class="row">  
+                <div class="col ">
+                    <button type="button" class="btn btn-primary" id="btnAgregar" onclick="agregarProducto();">Agregar</button>
+                    <button type="button" class="btn btn-success" id="btnLimpiar" onclick="limpiar();">Limpiar</button>
+                    <button type="button" class="btn btn-danger" id="btnModificar" onclick="modificaProducto();">Modificar</button>
+                    <button type="button" class="btn btn-warning" id="btnEliminar" onclick="eliminarProducto();" >Eliminar</button>
+                    <button type="button" class="btn btn-info" id="btnActivar" onclick="activarProducto();">Activar</button>
+                    <button type="button" class="btn btn-secondary" id="btnDesactivar" onclick="desactivarProducto();">Desactivar</button>
+                </div>
+            </div>
+            <div class="row">  
+                <div class="col">
+                    <div class="table-responsive">
+                        <br>
+                        <h1>Lista de sucursales</h1>
+                        <input class="txts form-control p-3 mb-2  text-success-emphasis" type="text" id="inputBusqueda" placeholder="Buscador de productos" aria-label="Buscador de productos" onkeyup="search()">
+                        <br><table class="table table table-striped-columns" id="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">URL</th>
+                                    <th scope="col">Ubicación Física</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">Horario</th>
+                                    <th scope="col">Estatus</th>
+                                    <th scope="col">Latitud</th>
+                                    <th scope="col">Longitud</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tblProductos" >
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <script src="gests.js" type="text/javascript"></script>
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    </body>
+</html>

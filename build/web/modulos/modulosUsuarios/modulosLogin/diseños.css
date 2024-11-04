@@ -1,0 +1,57 @@
+body{
+    background: #FEF2E4;
+}
+.navbar {
+    background-color: #6f4e37; /* Café oscuro */
+}
+.nav-link {
+    color: white !important; /* Naranja para los enlaces */
+}
+.nav-link:hover {
+    color: #f9b071 !important; /* Naranja más claro al pasar el ratón */
+}
+.container-background {
+      background-color: #f8f9fa; /* Color de fondo claro */
+      background-image: url('../../../Logo/fondose.jpg'); /* Imagen de fondo */
+      background-size:100%;
+      background-position: center;
+      height: 600px;
+      padding: 50px 0; /* Espaciado arriba y abajo */
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.8); /* Fondo blanco con opacidad */
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .btn-light {
+      background-color: #007bff; /* Color de fondo del botón */
+      color: #fff;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+    .btn-light:hover {
+      background-color: #0056b3; /* Color del botón al pasar el ratón */
+    }
+  .card {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 17px; 
+    border: #FEF2E4 5px solid;
+   box-shadow: 0 15px 40px black;
+}
+.img{
+    border-radius: 50px;
+     box-shadow: 0 5px 10px #FEF0E5;
+}
+.btn{
+    background:rgba(0, 0, 0, 0.1);
+}
+.btn:hover{
+    background: #FEF0E5;
+}
+.form-control{
+    opacity: 0.5;
+    font-weight: bold;
+}
